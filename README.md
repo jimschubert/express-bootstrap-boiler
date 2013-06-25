@@ -45,3 +45,8 @@ _(Nothing yet)_
 ## License
 Copyright (c) 2013 Jim Schubert
 Licensed under the MIT license.
+
+## Other Licenses
+Bootstrap: http://www.apache.org/licenses/LICENSE-2.0
+jQuery: http://jquery.org/license
+Modernizr: http://modernizr.com/license/
