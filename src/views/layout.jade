@@ -1,0 +1,76 @@
+doctype 5
+//if lt IE 7
+    html(class="no-js ie6 oldie", lang="en")
+//if IE 7
+    html(class="no-js ie7 oldie", lang="en")
+//if IE 8
+    html(class="no-js ie8 oldie", lang="en")
+//[if gt IE 8]<!
+html(class="no-js", lang="en")
+    //<![endif]
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+        title
+        meta(name='description', content='')
+        meta(name='viewport', content='width=device-width')
+        link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/main.css')
+        title= title
+        script(src="//www.google-analytics.com/ga.js")
+        link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.min.css')
+        link(rel='stylesheet', href='/stylesheets/main.css')
+        script(src='/javascripts/vendor/modernizr-2.6.2-respond-1.1.0.min.js')
+
+    body
+        // [if lt IE 7] <!
+          p(class=chromeframe) You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.
+        //<![endif]
+        div.navbar.navbar-inverse.navbar-fixed-top
+            div.navbar-inner
+                div.container
+                    a.btn.btn-navbar(data-toggle="collapse",data-target=".nav-collapse")
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.brand(href="/") #{title}
+                    div.nav-collapse.collapse
+                        ul.nav
+                            li.active: a(href="/") Home
+                            li: a(href="/about") About
+                            li: a(href="/contact") Contact
+                            li.dropdown
+                                a.dropdown-toggle(href="#",data-toggle="dropdown") Dropdown <b class="caret"></b>
+                                ul.dropdown-menu
+                                    li: a(href="#") Action
+                                    li: a(href="#") Another Action
+                                    li: a(href="#") Something else
+                                    li.divider
+                                    li.nav-header Nav header
+                                    li: a(href="#") Separated Link
+                                    li: a(href="#") One more separated link
+                        form.navbar-form.pull-right
+                            input.span2(type="text",placeholder="Email")
+                            input.span2(type="password",placeholder="Password")
+                            button.btn(type="submit") Sign in
+
+        //container
+        div.container
+
+            block content
+
+        hr
+        footer: p &copy; Company 2012
+
+        ///container
+        script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+        script
+            window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
+
+        script(src='javascripts/vendor/bootstrap.min.js')
+        script(src='javascripts/main.js')
+        script
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
